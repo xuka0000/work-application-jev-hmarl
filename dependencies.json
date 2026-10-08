@@ -1,0 +1,41 @@
+{
+  "external_import_names": [
+    "analyze_jev_local_controls",
+    "clarabel",
+    "execution_policy",
+    "jev_publication",
+    "networkx",
+    "numpy",
+    "own_admission",
+    "own_window",
+    "pandapower",
+    "prepare_jev_publication_campaign",
+    "psutil",
+    "ptin_sim",
+    "pytest",
+    "requests",
+    "scipy",
+    "src",
+    "torch",
+    "training_runtime"
+  ],
+  "dynamic_calls": [
+    {
+      "file": "scripts/run_jev_development_batch.py",
+      "line": 56,
+      "call": "subprocess.Popen(command, cwd=ROOT, stdout=handle, stderr=subprocess.STDOUT)"
+    },
+    {
+      "file": "src/ptin_sim/closed_loop/communication_study/sited_resource_dispatch.py",
+      "line": 50,
+      "call": "self.backend.run(self.scenario, closed_pdn_edges=closed_pdn_edges, supplies=supplies)"
+    },
+    {
+      "file": "src/ptin_sim/closed_loop/communication_study/grouped_dispatch.py",
+      "line": 57,
+      "call": "self.backend.run(scenario, closed_pdn_edges=closed_pdn_edges, supplies=tuple(reduced))"
+    }
+  ],
+  "dependency_type": "static import closure plus known original search roots; runtime assets remain external",
+  "training_evaluation_configs": "Required campaign manifests and CLI arguments are enforced in the included entrypoints; private production records not distributed."
+}
